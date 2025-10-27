@@ -3393,7 +3393,7 @@
 /turf/open/floor/cobble,
 /area/rogue/under/mountains/anvil/dungeon)
 "Tp" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/mountains/anvil/dungeon/lower)
 "Tx" = (
 /obj/structure/fluff/walldeco/moon,

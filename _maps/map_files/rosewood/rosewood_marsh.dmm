@@ -3799,7 +3799,7 @@
 /area/rogue/outdoors/bog)
 "wl" = (
 /obj/effect/landmark/mapGenerator/marsh,
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/bog)
 "wn" = (
 /obj/effect/decal/cleanable/vomit/old,
@@ -5664,7 +5664,7 @@
 /turf/open/floor/cobblerock,
 /area/rogue/outdoors/bog)
 "Gy" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/bog)
 "GA" = (
 /obj/structure/barricade/wooden,

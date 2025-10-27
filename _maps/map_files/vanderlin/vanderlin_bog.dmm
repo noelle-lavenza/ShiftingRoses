@@ -304,7 +304,7 @@
 /turf/open/floor/churchmarble,
 /area/rogue/indoors/shelter/bog)
 "ed" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/bog)
 "ee" = (
 /turf/closed/mineral/random/high,

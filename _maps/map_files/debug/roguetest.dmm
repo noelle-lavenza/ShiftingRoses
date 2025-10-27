@@ -99,7 +99,7 @@
 /turf/open/floor/grass/yel,
 /area/rogue/outdoors)
 "as" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area)
 "at" = (
 /turf/closed/mineral/bedrock,
@@ -3252,7 +3252,7 @@
 /turf/open/floor/dirt,
 /area/rogue/outdoors/mountains/decap)
 "Uo" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue)
 "Uv" = (
 /turf/closed,

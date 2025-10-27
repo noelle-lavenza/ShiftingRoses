@@ -1494,7 +1494,7 @@
 /turf/closed,
 /area/rogue/outdoors/mountains)
 "DX" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/woods)
 "DZ" = (
 /obj/structure/closet/crate/chest/wicker,

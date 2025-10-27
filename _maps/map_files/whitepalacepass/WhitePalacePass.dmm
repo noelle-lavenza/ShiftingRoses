@@ -4985,7 +4985,7 @@
 /turf/open/floor/ruinedwood/darker,
 /area/rogue/indoors/town/tavern)
 "eNN" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/town/roofs)
 "eOx" = (
 /obj/structure/window/openclose{
@@ -5443,7 +5443,7 @@
 /turf/open/floor/tile/diamond/blue,
 /area/rogue/indoors/town/bath)
 "fli" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/river)
 "flt" = (
 /turf/open/floor/dirt/road,
@@ -14208,7 +14208,7 @@
 /area/rogue/indoors/town/clocktower)
 "nwq" = (
 /obj/effect/landmark/mapGenerator/whitepalacepass/field,
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "nwy" = (
 /obj/structure/window/openclose{
@@ -14868,7 +14868,7 @@
 /turf/open/floor/ruinedwood,
 /area/rogue/indoors/lich)
 "odL" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "odZ" = (
 /obj/effect/decal/cobbleedge{
@@ -17962,7 +17962,7 @@
 "qRq" = (
 /obj/effect/landmark/mapGenerator/whitepalacepass/field,
 /obj/effect/landmark/mapGenerator/whitepalacepass/field,
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "qRG" = (
 /obj/effect/landmark/tram/queued_path/cargo_stop,

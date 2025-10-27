@@ -24,7 +24,7 @@
 		/turf/open/transparent/openspace,
 		/turf/baseturf_skipover,
 		/turf/baseturf_bottom,
-		/turf/closed/basic,
+		/turf/closed/dark_filler,
 		/turf/open/floor/cobblerock/snow,
 		/turf/open/floor/plasteel,
 		/turf/open/floor/naturalstone,

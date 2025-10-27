@@ -3586,7 +3586,7 @@
 /turf/open/floor/blocks,
 /area/rogue/indoors/town/garrison)
 "caX" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/town/caverogue)
 "cbf" = (
 /turf/closed/wall/mineral/stonebrick,
@@ -6132,7 +6132,7 @@
 /turf/open/floor/ruinedwood,
 /area/rogue/indoors/town/magician)
 "dGE" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/indoors/town)
 "dGI" = (
 /obj/machinery/light/fueled/wallfire/candle,
@@ -20666,7 +20666,7 @@
 	dir = 1
 	},
 /obj/structure/fluff/wallclock,
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/indoors/town)
 "mDG" = (
 /obj/machinery/light/fueled/torchholder{
@@ -29972,7 +29972,7 @@
 	pixel_x = -6;
 	pixel_y = 6
 	},
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/indoors/town)
 "ssj" = (
 /obj/structure/fake_machine/stockpile{

@@ -196,7 +196,7 @@
 /turf/open/floor/snow,
 /area/rogue/outdoors/woods)
 "dm" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/mountains)
 "dz" = (
 /obj/structure/flora/newtree/snow,
@@ -218,7 +218,7 @@
 /turf/open/floor/snow,
 /area/rogue/outdoors/woods)
 "dI" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "dJ" = (
 /obj/machinery/light/fueled/firebowl/firebowlb,
@@ -249,7 +249,7 @@
 /area/rogue/under/cave)
 "eh" = (
 /obj/effect/landmark/mapGenerator/rosewood/forest,
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "ej" = (
 /obj/structure/fluff/railing/tall/palisade{
@@ -1157,7 +1157,7 @@
 /turf/open/water,
 /area/rogue/outdoors/woods)
 "zA" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/woods)
 "zE" = (
 /obj/structure/wild_plant/nospread/poppy,

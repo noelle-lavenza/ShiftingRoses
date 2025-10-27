@@ -5515,7 +5515,7 @@
 /turf/open/floor/tile,
 /area/rogue/indoors/town)
 "cVV" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/mountains)
 "cWc" = (
 /obj/structure/rack/shelf/biggest,
@@ -30876,7 +30876,7 @@
 /turf/open/floor/church,
 /area/rogue/indoors/town/church)
 "raF" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/cave)
 "raS" = (
 /obj/machinery/light/fueled/firebowl/standing/blue,

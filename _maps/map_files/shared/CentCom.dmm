@@ -39,7 +39,7 @@
 	},
 /area/rogue/outdoors)
 "ag" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue)
 "ah" = (
 /obj/item/weapon/sword/short,
@@ -1394,7 +1394,7 @@
 /turf/open/floor/grass/red,
 /area/rogue/outdoors/woods_safe)
 "fC" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors)
 "fD" = (
 /obj/structure/vampire/portalmaker,

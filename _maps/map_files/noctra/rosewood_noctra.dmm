@@ -5502,7 +5502,7 @@
 /turf/open/floor/tile,
 /area/rogue/indoors/town)
 "cVV" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/outdoors/mountains)
 "cWa" = (
 /obj/machinery/light/fueled/firebowl/standing{

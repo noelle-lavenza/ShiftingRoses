@@ -667,7 +667,7 @@
 /turf/open/floor/naturalstone,
 /area/rogue/under/mountains/anvil/lower/building)
 "kj" = (
-/turf/closed/basic,
+/turf/closed/dark_filler,
 /area/rogue/under/mountains/anvil/lower)
 "ko" = (
 /turf/open/floor/cobblerock,
