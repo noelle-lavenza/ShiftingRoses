@@ -1,3 +1,4 @@
+GLOBAL_LIST_EMPTY_TYPED(all_stockpile_storages, /obj/structure/stockpile_storage)
 /obj/structure/stockpile_storage
 	name = "stockpile storage"
 	desc = "A designated storage area for stockpiled goods."
@@ -12,6 +13,7 @@
 
 /obj/structure/stockpile_storage/Initialize(mapload)
 	. = ..()
+	GLOB.all_stockpile_storages += src
 	REGISTER_REQUIRED_MAP_ITEM(1, INFINITY)
 
 	proximity_monitor = new(src, storage_range, FALSE)
@@ -24,6 +26,7 @@
 	initial_scan()
 
 /obj/structure/stockpile_storage/Destroy()
+	GLOB.all_stockpile_storages -= src
 	QDEL_NULL(proximity_monitor)
 	// Unlink from all stocks
 	for(var/datum/stock/S as anything in linked_stocks)
