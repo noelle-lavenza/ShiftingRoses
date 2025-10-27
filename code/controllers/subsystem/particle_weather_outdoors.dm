@@ -67,7 +67,10 @@ SUBSYSTEM_DEF(outdoor_effects)
 	var/list/z_list = SSmapping.levels_by_trait(ZTRAIT_STATION)
 	z_list |= SSmapping.levels_by_trait(ZTRAIT_CENTCOM)
 	z_list -= SSmapping.levels_by_trait(ZTRAIT_IGNORE_WEATHER_TRAIT)
-	for (var/z in z_list)
+	// this relies on z_list on SSmapping always being ordered from lowest to highest
+	// that lets us avoid doing a sort here
+	for (var/i in length(z_list) to 1 step -1) // loop backwards to make best use of the cache
+		var/z = z_list[i]
 		for (var/turf/T in block(locate(1,1,z), locate(world.maxx,world.maxy,z)))
 			GLOB.SUNLIGHT_QUEUE_WORK += T
 
@@ -92,12 +95,11 @@ SUBSYSTEM_DEF(outdoor_effects)
 	var/list/z_list = SSmapping.levels_by_trait(ZTRAIT_STATION)
 	z_list |= SSmapping.levels_by_trait(ZTRAIT_CENTCOM)
 	z_list -= SSmapping.levels_by_trait(ZTRAIT_IGNORE_WEATHER_TRAIT)
-	for (var/z in z_list)
-		init_z_turfs(z)
-
-/datum/controller/subsystem/outdoor_effects/proc/init_z_turfs(z)
-	for (var/turf/T in block(locate(1,1,z), locate(world.maxx,world.maxy,z)))
-		GLOB.SUNLIGHT_QUEUE_WORK += T
+	// this relies on z_list on SSmapping always being ordered from lowest to highest
+	// that lets us avoid doing a sort here
+	for (var/i in length(z_list) to 1 step -1) // loop backwards to make best use of the cache
+		var/z = z_list[i]
+		GLOB.SUNLIGHT_QUEUE_WORK += block(locate(1,1,z), locate(world.maxx,world.maxy,z))
 
 /datum/controller/subsystem/outdoor_effects/proc/check_cycle()
 	if(!next_step_datum)
@@ -208,13 +210,13 @@ SUBSYSTEM_DEF(outdoor_effects)
 
 		/* if we haven't initialized but we are affected, create new and check state */
 		if(!U)
-			T.outdoor_effect = new /atom/movable/outdoor_effect(T)
+			T.outdoor_effect = new /atom/movable/outdoor_effect(T) // force-create one
 			T.get_sky_and_weather_states()
 			U = T.outdoor_effect
 
 			/* in case we aren't indoor somehow, wack us into the proc queue, we will be skipped on next indoor check */
 			if(U.state != SKY_BLOCKED)
-				GLOB.SUNLIGHT_QUEUE_UPDATE += T.outdoor_effect
+				GLOB.SUNLIGHT_QUEUE_UPDATE += U
 
 		if(U.state != SKY_BLOCKED)
 			continue
