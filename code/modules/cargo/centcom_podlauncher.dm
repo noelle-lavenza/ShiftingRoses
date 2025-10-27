@@ -126,7 +126,7 @@ force_open = FALSE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.adm
 			oldTurf = get_turf(M) //Used for the "teleportBack" action
 			var/area/A = locate(bay) in GLOB.sortedAreas
 			var/list/turfs = list()
-			for(var/turf/T in A)
+			for(var/turf/T in A.get_turfs_from_all_zlevels())
 				turfs.Add(T) //Fill a list with turfs in the area
 			var/turf/T = safepick(turfs) //Only teleport if the list isn't empty
 			if(!T) //If the list is empty, error and cancel
