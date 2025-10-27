@@ -276,11 +276,10 @@ SUBSYSTEM_DEF(outdoor_effects)
 	OE.luminosity = MA.luminosity
 
 //Retrieve an overlay from the list - create if necessary
-/datum/controller/subsystem/outdoor_effects/proc/get_sunlight_overlay(fr, fg, fb, fa)
-	var/index = "[fr]|[fg]|[fb]|[fa]"
-	LAZYINITLIST(sunlight_overlays)
-	if(!sunlight_overlays[index])
-		sunlight_overlays[index] = create_sunlight_overlay(fr, fg, fb, fa)
+/datum/controller/subsystem/outdoor_effects/proc/get_sunlight_overlay(fr = 0, fg = 0, fb = 0, fa = 0)
+	var/index = jointext(args, "|") // using = 0 ensures that the index still works even if we don't pass all args
+	if(!sunlight_overlays?[index])
+		LAZYSET(sunlight_overlays, index, create_sunlight_overlay(fr, fg, fb, fa))
 	return sunlight_overlays[index]
 
 //get our weather overlay
