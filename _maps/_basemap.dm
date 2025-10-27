@@ -2,7 +2,7 @@
 
 #ifndef LOWMEMORYMODE
 	#ifdef ALL_MAPS
-		#include "map_files/noctra/rosewood_noctra.dmm"
+		#include "map_files\debug\roguetest.dmm"
 
 		#ifdef CIBUILDING
 			#include "templates.dm"
