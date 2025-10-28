@@ -193,7 +193,7 @@
 	var/modifier = 1
 	if(SSParticleWeather.runningWeather?.target_trait == PARTICLEWEATHER_RAIN) //this does apply to indoor turfs but w/e
 		var/turf/floor= get_turf(src)
-		if(!floor?.outdoor_effect?.weatherproof)
+		if(!floor.outdoor_effect && !floor.outdoor_effect.weatherproof) // no outdoor_effect -> weatherproof, implicitly
 			modifier = 0.5
 	if(isturf(get_turf(src)))
 		var/turf/floor= get_turf(src)

@@ -223,19 +223,22 @@ Sunlight System
 /* runs up the Z stack for this turf, returns a assoc (SKYVISIBLE, WEATHERPROOF)*/
 /* pass as_ceiling=TRUE when we are checking our ceiling's stats */
 /turf/proc/get_ceiling_status(as_ceiling = FALSE)
-	// Check our cached values.
-	var/our_state = outdoor_effect?.state
-	if(!isnull(our_state))
-		return list("SKYVISIBLE" = (our_state != SKY_BLOCKED), "WEATHERPROOF" = (outdoor_effect.weatherproof))
+	// Check our cached values, ONLY WHEN NOT AS A CEILING
+	if(!as_ceiling)
+		var/our_state = outdoor_effect?.state
+		var/our_weatherproof = outdoor_effect?.weatherproof
+		if(!isnull(our_state) && !isnull(our_weatherproof))
+			return list("SKYVISIBLE" = (our_state != SKY_BLOCKED), "WEATHERPROOF" = (our_weatherproof))
 
 	// Start non-cached checks
 	if(isopenturf(src) && !as_ceiling) //We are open, so assume open to the elements
+		// for some reason, is_weatherproof() should only be checked when the turf is acting as a ceiling
 		. = list("SKYVISIBLE" = TRUE, "WEATHERPROOF" = FALSE)
 	else if(!istransparentturf(src))
 		// Early leave if we can't see the sky - if we are an opaque turf, we already know the results
 		// I can't think of a case where we would have a turf that would block light but let weather effects through - Maybe a vent?
 		// fix this if that is the case
-		return list("SKYVISIBLE" = FALSE, "WEATHERPROOF" = is_weatherproof())
+		return list("SKYVISIBLE" = FALSE, "WEATHERPROOF" = TRUE)
 	else
 		// This turf is either closed or acting as a ceiling
 		. = list("SKYVISIBLE" = TRUE, "WEATHERPROOF" = is_weatherproof()) // check for weatherproof objects too

@@ -575,7 +575,7 @@ GLOBAL_VAR_INIT(liquid_debug_colors, FALSE)
 			continue
 		var/modifier = 1
 		if(SSParticleWeather.runningWeather?.target_trait == PARTICLEWEATHER_RAIN)
-			if(!floor.outdoor_effect?.weatherproof)
+			if(floor.outdoor_effect && !floor.outdoor_effect.weatherproof) // no outdoor_effect -> weatherproof, implicitly
 				modifier = 0.5
 		if(prob(floor.spread_chance * modifier))
 			for(var/turf/ranged_floor in range(1, floor))
